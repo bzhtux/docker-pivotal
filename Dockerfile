@@ -4,7 +4,7 @@ LABEL maintainer="Yannick Foeillet <bzhtux@gmail.com>"
 
 ARG BOSH_VERSION="5.4.0"
 ARG FLY_VERSION="5.4.1"
-ARG UAA_VERSION="O.7.0"
+ARG UAA_VERSION="0.7.0"
 ARG CREDHUB_VERSION="2.5.2"
 ARG OM_VERSION="3.2.1"
 
