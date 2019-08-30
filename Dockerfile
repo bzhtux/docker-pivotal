@@ -6,6 +6,7 @@ ARG BOSH_VERSION="5.4.0"
 ARG FLY_VERSION="5.4.1"
 ARG UAA_VERSION="O.7.0"
 ARG CREDHUB_VERSION="2.5.2"
+ARG OM_VERSION="3.2.1"
 
 RUN apk upgrade \
     && apk add --no-cache \
@@ -35,4 +36,8 @@ RUN curl -L "https://github.com/cloudfoundry/bosh-cli/releases/download/v${BOSH_
     && chmod +x /tmp/credhub \
     && mv /tmp/credhub /usr/local/bin/ \
     && rm -f /tmp/credhub.tgz \
+    && curl -L "https://github.com/pivotal-cf/om/releases/download/${OM_VERSION}/om-linux-${OM_VERSION}.tar.gz" -o /tmp/om.tar.gz \
+    && tar -xzf /tmp/om.tar.gz -C /tmp \
+    && mv /tmp/om /usr/local/bin \
+    && rm -f /tmp/om.tar.gz \
     && ls -l /tmp/
