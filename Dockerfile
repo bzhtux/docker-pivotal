@@ -14,6 +14,7 @@ RUN apk upgrade \
     curl \
     git \
     jq \
+    openssh-client \
     && rm -rf /var/cache/apk/* 
 
 RUN curl -L "https://github.com/cloudfoundry/bosh-cli/releases/download/v${BOSH_VERSION}/bosh-cli-${BOSH_VERSION}-linux-amd64" -o /tmp/bosh \
