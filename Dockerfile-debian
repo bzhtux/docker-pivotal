@@ -16,7 +16,8 @@ RUN apt update -y \
     golang \
     jq \
     make \
-    openssh-client
+    openssh-client \
+    ruby
 
 RUN curl -L "https://github.com/cloudfoundry/bosh-cli/releases/download/v${BOSH_VERSION}/bosh-cli-${BOSH_VERSION}-linux-amd64" -o /tmp/bosh \
     && chmod +x /tmp/bosh \
