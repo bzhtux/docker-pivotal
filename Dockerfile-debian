@@ -1,4 +1,4 @@
-FROM bullseye-slim
+FROM debian:bullseye-slim
 
 LABEL maintainer="Yannick Foeillet <bzhtux@gmail.com>"
 
