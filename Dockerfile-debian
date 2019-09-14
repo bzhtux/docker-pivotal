@@ -9,7 +9,7 @@ ARG CREDHUB_VERSION="2.5.2"
 ARG OM_VERSION="3.2.1"
 
 RUN apt update -y \
-    apt install -y\
+    && apt install -y\
     bash \
     curl \
     git \
