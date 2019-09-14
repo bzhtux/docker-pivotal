@@ -2,6 +2,8 @@ FROM alpine
 
 LABEL maintainer="Yannick Foeillet <bzhtux@gmail.com>"
 
+ENV GOCACHE="/root/.cache/go-build"
+
 ARG BOSH_VERSION="6.0.0"
 ARG FLY_VERSION="5.4.1"
 ARG UAA_VERSION="0.7.0"
@@ -11,7 +13,7 @@ ARG OM_VERSION="3.2.1"
 RUN apk upgrade \
     && apk add --no-cache \
     bash \
-    curl \
+    curl \G
     git \
     go \
     jq \
@@ -43,4 +45,4 @@ RUN curl -L "https://github.com/cloudfoundry/bosh-cli/releases/download/v${BOSH_
     && tar -xzf /tmp/om.tar.gz -C /tmp \
     && mv /tmp/om /usr/local/bin \
     && rm -f /tmp/om.tar.gz \
-    && ls -l /tmp/
+    && mkdir -p /root/.cache/go-build
