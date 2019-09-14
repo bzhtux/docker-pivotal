@@ -13,7 +13,7 @@ RUN apt update -y \
     bash \
     curl \
     git \
-    go \
+    golang \
     jq \
     make \
     openssh-client
