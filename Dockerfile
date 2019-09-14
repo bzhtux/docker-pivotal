@@ -13,6 +13,7 @@ RUN apk upgrade \
     bash \
     curl \
     git \
+    go \
     jq \
     make \
     openssh-client \
