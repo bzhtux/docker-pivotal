@@ -13,7 +13,7 @@ ARG OM_VERSION="3.2.1"
 RUN apk upgrade \
     && apk add --no-cache \
     bash \
-    curl \G
+    curl \
     git \
     go \
     jq \
