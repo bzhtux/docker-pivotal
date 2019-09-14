@@ -14,6 +14,7 @@ RUN apk upgrade \
     curl \
     git \
     jq \
+    make \
     openssh-client \
     && rm -rf /var/cache/apk/* 
 
