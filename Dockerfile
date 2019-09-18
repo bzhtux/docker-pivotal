@@ -9,6 +9,7 @@ ARG FLY_VERSION="5.4.1"
 ARG UAA_VERSION="0.7.0"
 ARG CREDHUB_VERSION="2.5.2"
 ARG OM_VERSION="3.2.1"
+ARG BBR_VERSION="1.5.2"
 
 RUN apk upgrade \
     && apk add --no-cache \
@@ -45,4 +46,6 @@ RUN curl -L "https://github.com/cloudfoundry/bosh-cli/releases/download/v${BOSH_
     && tar -xzf /tmp/om.tar.gz -C /tmp \
     && mv /tmp/om /usr/local/bin \
     && rm -f /tmp/om.tar.gz \
+    && curl -L "https://github.com/cloudfoundry-incubator/bosh-backup-and-restore/releases/download/v${BBR_VERSION}/bbr-${BBR_VERSION}-linux-amd64" -o /usr/local/bin/bbr \
+    && chmod +x /usr/local/bin/bbr \
     && mkdir -p /root/.cache/go-build
