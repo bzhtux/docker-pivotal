@@ -20,6 +20,8 @@ RUN apk upgrade \
     jq \
     make \
     openssh-client \
+    ruby \
+    ruby-dev \
     && rm -rf /var/cache/apk/* 
 
 RUN curl -L "https://github.com/cloudfoundry/bosh-cli/releases/download/v${BOSH_VERSION}/bosh-cli-${BOSH_VERSION}-linux-amd64" -o /tmp/bosh \
@@ -48,4 +50,5 @@ RUN curl -L "https://github.com/cloudfoundry/bosh-cli/releases/download/v${BOSH_
     && rm -f /tmp/om.tar.gz \
     && curl -L "https://github.com/cloudfoundry-incubator/bosh-backup-and-restore/releases/download/v${BBR_VERSION}/bbr-${BBR_VERSION}-linux-amd64" -o /usr/local/bin/bbr \
     && chmod +x /usr/local/bin/bbr \
+    && gem install cf-uaac \
     && mkdir -p /root/.cache/go-build
