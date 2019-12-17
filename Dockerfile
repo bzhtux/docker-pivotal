@@ -15,9 +15,11 @@ RUN apk upgrade \
     && apk add --no-cache \
     bash \
     curl \
+    g++ \
     git \
     go \
     jq \
+    libc-dev \
     make \
     openssh-client \
     ruby \
@@ -51,4 +53,5 @@ RUN curl -L "https://github.com/cloudfoundry/bosh-cli/releases/download/v${BOSH_
     && curl -L "https://github.com/cloudfoundry-incubator/bosh-backup-and-restore/releases/download/v${BBR_VERSION}/bbr-${BBR_VERSION}-linux-amd64" -o /usr/local/bin/bbr \
     && chmod +x /usr/local/bin/bbr
 
-RUN gem install cf-uaac 
+RUN gem install rdoc \
+    && gem install cf-uaac
