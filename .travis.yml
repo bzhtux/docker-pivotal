@@ -3,11 +3,11 @@ dist: trusty
 language: bash
 
 services:
-- docker
+  - docker
 
 before_install:
-# install goss
-- curl -L https://goss.rocks/install | sudo sh
+  # install goss
+  - curl -L https://goss.rocks/install | sudo sh
 
 script:
-- ./test.sh
+  - ./test.sh
