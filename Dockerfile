@@ -4,8 +4,6 @@ LABEL maintainer="Yannick Foeillet <bzhtux@gmail.com>"
 
 ARG BOSH_VERSION="6.0.0"
 ARG FLY_VERSION="5.4.1"
-ARG UAA_VERSION="0.7.0"
-ARG CREDHUB_VERSION="2.5.2"
 ARG OM_VERSION="3.2.1"
 ARG BBR_VERSION="1.5.2"
 
@@ -24,11 +22,6 @@ RUN curl -L "https://github.com/cloudfoundry/bosh-cli/releases/download/v${BOSH_
     && chmod +x /tmp/fly \
     && mv /tmp/fly /usr/local/bin/ \
     && rm -f /tmp/fly.tgz \
-    && curl -L "https://github.com/cloudfoundry-incubator/credhub-cli/releases/download/${CREDHUB_VERSION}/credhub-linux-${CREDHUB_VERSION}.tgz" -o /tmp/credhub.tgz \
-    && tar -xzf /tmp/credhub.tgz -C /tmp \
-    && chmod +x /tmp/credhub \
-    && mv /tmp/credhub /usr/local/bin/ \
-    && rm -f /tmp/credhub.tgz \
     && curl -L "https://github.com/pivotal-cf/om/releases/download/${OM_VERSION}/om-linux-${OM_VERSION}.tar.gz" -o /tmp/om.tar.gz \
     && tar -xzf /tmp/om.tar.gz -C /tmp \
     && mv /tmp/om /usr/local/bin \
