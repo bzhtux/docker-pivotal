@@ -1,14 +1,13 @@
 os: linux
 language: bash
-
 services:
-  - docker
-
+- docker
 before_install:
-  # build docker image
-  - docker build -t pivotal .
-  # install goss
-  - curl -L https://goss.rocks/install | sudo sh
-
+- docker build -t pivotal .
+- curl -L https://goss.rocks/install | sudo sh
 script:
-  - ./test.sh
+- "./test.sh"
+notifications:
+  slack:
+    rooms:
+      secure: wPZAYleYzXzhyNwytyk+fIO47aZy4zhxp2KkOSyuuwg0B1KWBuXY96tvVypj+UHqPGE/C02YbdjvwzqoZI3Px5243yC85tJRRfDIzSH/UKHdfPvbIugtxy12E36rB/4yJPacM6kkSSimkl4Qj5ywbdG9QW6kGLOGw7lg/IcPXlSMC5Jn+kExBhkuNOLQ2H3yja7ISrHeCej0PM/zft5J/2h/l05/y8SJMRSb9fqlUFbv6G51b6MjqlZq2Q84keukfx1OIJJ7timRLOp6a5Z+oslqNPmo8cU49sHEg2A3vcTnVMapIMTYywcPSwcAlkIcrCMnCLN+O+tP4p1GKoFVH7tL2p3cIA9Gl6P9nC0p9FSx4DqtoVEvzZOhRhCNi3oVwP/WMuiIpmz89flAvu3IKpUedmwBGn0Qm3wLypQjiPnpcuOLWSNE6iJLDM+k584DuY2LsUtPGkV+0PtuyKJyaJCylTl3bYBzgcET0D09QShZGzGArgtXrly2DZjSJtrpOt6UxRkLFinUPsmZcSvjLFofVaS6vQUAvj8slrAszBgxv85BsjBKmBcx33FrM3NgEbqKg8eIpxwf24lnw7oHHdkKoqTakoVdSIa8jiAp/43FLHqTVO9gYmGT2kSUkl1j//shweUNq7oGZzn0Njfln6j+npgiLKRAqkeDmUjS2Iw=
