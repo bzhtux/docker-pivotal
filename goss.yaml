@@ -1,0 +1,18 @@
+---
+command:
+  bosh --version:
+    exit-status: 0
+    stdout:
+    - version 6.0.0
+  fly --version:
+    exit-status: 0
+    stdout:
+    - 5.4.1
+  om --version:
+    exit-status: 0
+    stdout:
+    - 3.2.1
+  bbr --version:
+    exit-status: 0
+    stdout:
+    - 1.5.2
