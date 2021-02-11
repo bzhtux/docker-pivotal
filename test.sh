@@ -2,4 +2,4 @@
 
 set -euo pipefail
 
-dgoss run pivotal sleep 3
+dgoss run bzhtux/pivotal:alpine sleep 3
