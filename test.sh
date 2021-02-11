@@ -2,4 +2,6 @@
 
 set -euo pipefail
 
-dgoss run bzhtux/pivotal:alpine sleep 3
+cat Dockerfile
+
+dgoss run pivotal sleep 3
