@@ -3,7 +3,7 @@ command:
   bosh --version:
     exit-status: 0
     stdout:
-    - version 6.0.0
+    - version 6.4.1
   fly --version:
     exit-status: 0
     stdout:
