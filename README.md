@@ -23,13 +23,21 @@ Pivotal docker image provides the following cli tools:
  * FLY: **6.7.5**
  * OM: **7.2.0**
  * BBR: **1.9.1**
- * CREDHUB: **2.7.1-beta.1**
+ * CREDHUB: **2.9.1-beta.9**
 
 
 # download
 
-```
-docker pull bzhtux/pivotal:${tag}
+Latest release:
+
+```shell
+$ docker pull bzhtux/pivotal:0.0.10
 ```
 
-[docker hub](https://hub.docker.com/repository/docker/bzhtux/pivotal/tags?page=1&ordering=last_updated)
+For other/old releases:
+
+```shell
+$ docker pull bzhtux/pivotal:${tag}
+```
+
+[docker hub](https://hub.docker.com/repository/docker/bzhtux/pivotal/tags?page=1&ordering=name)

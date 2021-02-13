@@ -19,4 +19,4 @@ command:
   credhub --version:
     exit-status: 0
     stdout:
-    - 2.7.1
+    - 2.9.1
