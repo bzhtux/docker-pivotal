@@ -11,7 +11,7 @@ dgoss run pivotal sleep 3
 
 # Docker hub login
 echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-docker build -t bzhtux/pivotal:$TRAVIS_TAG
+docker build -t bzhtux/pivotal:$TRAVIS_TAG .
 docker push bzhtux/pivotal:$TRAVIS_TAG
 
 # Trigger docker build and pubish to docker hub
