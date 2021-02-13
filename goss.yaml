@@ -7,7 +7,7 @@ command:
   fly --version:
     exit-status: 0
     stdout:
-    - 5.4.1
+    - 6.7.5
   om --version:
     exit-status: 0
     stdout:
