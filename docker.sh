@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-DOCKER_TAG={$TRAVIS_TAG:-master}
+DOCKER_TAG=${TRAVIS_TAG:-master}
 
 function login {
     echo "*** Docker hub login"
