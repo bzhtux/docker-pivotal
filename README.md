@@ -19,13 +19,17 @@ I mostly use this docker image with [concourse](https://concourse-ci.org/) pipel
 
 Pivotal docker image provides the following cli tools:
 
- * BOSH: **6.0.0**
- * FLY: **5.4.1**
- * OM: **3.2.1**
- * BBR: **1.5.2**
+ * BOSH: **6.4.1**
+ * FLY: **6.7.5**
+ * OM: **7.2.0**
+ * BBR: **1.9.1**
+ * CREDHUB: **2.7.1-beta.1**
+
 
 # download
 
 ```
-docker pull bzhtux/pivotal:alpine
+docker pull bzhtux/pivotal:${tag}
 ```
+
+[docker hub](https://hub.docker.com/repository/docker/bzhtux/pivotal/tags?page=1&ordering=last_updated)

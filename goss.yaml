@@ -15,7 +15,7 @@ command:
   bbr --version:
     exit-status: 0
     stdout:
-    - 1.5.2
+    - 1.9.1
   credhub --version:
     exit-status: 0
     stdout:

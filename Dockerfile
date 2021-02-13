@@ -5,7 +5,7 @@ LABEL maintainer="Yannick Foeillet <bzhtux@gmail.com>"
 ARG BOSH_VERSION="6.4.1"
 ARG FLY_VERSION="6.7.5"
 ARG OM_VERSION="7.2.0"
-ARG BBR_VERSION="1.5.2"
+ARG BBR_VERSION="1.9.1"
 ARG CREDHUB_VERSION="2.7.1-beta.1"
 
 RUN apk upgrade \
