@@ -14,22 +14,8 @@ before_install:
 - docker build -t pivotal .
 - curl -L https://goss.rocks/install | sudo sh
 
-# script:
-# - dgoss run pivotal sleep 3
-# notifications:
-#   slack:
-#     rooms:
-#       secure: A6KA2jg3lPert+VFWp+U+1fYRKVxPFVKvQ7cgUfxxp3xcjQz6fB8yhNN37HSABWx76auvacRRhzXPME+bABj87yYZEQmAQyumh2f0pwZZDv4SqZCHgXljRADTLIxsWVDzn8YC3mpszScbUTqRt2ySkmgaLK/jK/RRULyGpXU8RrvJt4owW302+C9Zapumz2ETlF2F2Nk0UmAEKffEewRVLQQosJTMKdqcQAcYtuuJ9DnVUSQRYvqhdUUdxd5bpAbAGHiUOsM9W7v1HxS0ht76VyKOdCbGhf+qICf87iSBG+wNu+OJBa8hEHn3Ab8AqHT2CNnlZtb4OdUxT7MalYEwS8Hnc+b2CguaWBzqFhQKwNi8bxVnv6fP3aFrI4rfagIyIdTrJkBv7S49Pk6WUq3uwEpPlpV9uTczHR17R9yW2IXdooaPqal8RWGGpDkbbOqj5DXDS921obA9zXBWCcbMMQJ1avsWyZJMuFBpZiqHLwt+avlL50i7pixXSIxZd27Rl5HzW+gtCfYFr6hMFQ6E2QtjPTHeepCYofmTzxpL5YL8/B6VfZSS4lTrVV6MqFRsdb1537jaGMGJD1NG9S459Bmc7UyswblOB24DfdvPyZLtPg8Ey6xCEc+oOsOxZn9WpcaHFlMEGWt9XQbWPPwEC04q30lIllFHgGACNe4t2g=
+script:
+- dgoss run pivotal sleep 3
 
-jobs:
-  include:
-    - stage: "Tests"
-      name: "Tests with dgoss"
-      script: dgoss run pivotal sleep 3
-    - stage: "Deploy"
-      name:  "Deploy to Docker hub"
-      script: ./docker.sh 0 0
-      # after_script: curl -X POST https://hub.docker.com/api/build/v1/source/d5cbd3b0-8269-48d1-85f2-ce14149f7e3f/trigger/c6a596e3-d753-41e2-ae1c-1d6acaa5d16b/call/
-
-# after_script:
-# - curl -X POST https://hub.docker.com/api/build/v1/source/d5cbd3b0-8269-48d1-85f2-ce14149f7e3f/trigger/c6a596e3-d753-41e2-ae1c-1d6acaa5d16b/call/
+after_success:
+- ./docker.sh
