@@ -54,10 +54,10 @@ jobs:
       - name: install goss and dgoss to test docker images
         run: curl -fsSL https://goss.rocks/install | sh
           
-      - name: build and test
-        run: |
-          docker buildx build . -f Dockerfile-debian -t pivotal:test
-          dgoss run pivotal:test sleep 3
+      #- name: build and test
+      #  run: |
+      #    docker buildx build . -f Dockerfile-debian -t pivotal:test
+      #    dgoss run pivotal:test sleep 3
       
       - name: Build and push Docker image
         uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
