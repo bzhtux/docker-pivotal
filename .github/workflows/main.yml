@@ -68,4 +68,4 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
 
       - name: build and test
-        run: dgoss run ${{ env.REGISTRY }}/${{ github.actor }}/${{ env.IMAGE_NAME }}:${{ steps.meta.outputs.tags }} sleep 3
+        run: dgoss run ${{ steps.meta.outputs.tags }} sleep 3
