@@ -31,13 +31,11 @@ Pivotal docker image provides the following cli tools:
 Latest release:
 
 ```shell
-$ docker pull bzhtux/pivotal:0.0.10
+$ docker pull docker pull ghcr.io/bzhtux/docker-pivotal:${TAG}
 ```
 
-For other/old releases:
+For default (master branch):
 
 ```shell
-$ docker pull bzhtux/pivotal:${tag}
+$ docker pull ghcr.io/bzhtux/docker-pivotal:master
 ```
-
-[docker hub](https://hub.docker.com/repository/docker/bzhtux/pivotal/tags?page=1&ordering=name)
